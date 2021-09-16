@@ -22,9 +22,30 @@ internal class EnemyMovement : MonoBehaviour
     {
         foreach (Waypoint waypoint in path)
         {
-            transform.position = waypoint.transform.position;
-            Debug.Log($"{name} is now in {waypoint.name}");
-            yield return new WaitForSeconds(movementSpeed);
+            Vector2 startPosition = transform.position;
+            Vector2 endPosition = waypoint.transform.position;
+            float travelPercent = 0;
+
+            Vector2 direction;
+            if (startPosition.y == endPosition.y)
+            {
+                direction = startPosition - endPosition;
+            }
+            else
+            {
+                direction = endPosition - startPosition;
+            }
+
+
+            float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            while(travelPercent < 1)
+            {
+                travelPercent += Time.deltaTime * movementSpeed;
+                transform.position = Vector2.Lerp(startPosition, endPosition, travelPercent);
+                yield return new WaitForEndOfFrame();
+            }
         }
     }
 
