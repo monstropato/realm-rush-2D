@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2841876180612311787}
   - component: {fileID: 2719450051612976266}
+  - component: {fileID: 331875795726136149}
   m_Layer: 0
-  m_Name: Tile (0)
+  m_Name: Tile (0, 0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +46,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a07baa85a563c458abaffbcc0c1f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &331875795726136149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355818204039096849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489554a57bd2fa240a584b5fff65a587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4945911183266971445
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +84,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4945911183266971445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2841876180612311787}
@@ -143,7 +156,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ((0,0, 0,0))
+  m_text: (0, 0)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -225,7 +238,7 @@ GameObject:
   - component: {fileID: 8645131778495270058}
   - component: {fileID: 422966254945420029}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: TileSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,10 +295,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1756228505
+  m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: adb11f2944f58d14187426669f08132d, type: 3}
+  m_Sprite: {fileID: 5232707396195194728, guid: 1e9a5643f298e9844976566f80e8c4b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

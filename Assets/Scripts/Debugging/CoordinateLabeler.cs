@@ -28,7 +28,7 @@ public class CoordinateLabeler : MonoBehaviour
     private void LabelCoordinate()
     {
         textCoordinates.text = $"{GetCoordinates()}";
-        gameObject.name = $"Tile {GetCoordinates()}";
+        gameObject.name = $"{GetCoordinates()}";
     }
 
     private Vector2Int GetCoordinates()
